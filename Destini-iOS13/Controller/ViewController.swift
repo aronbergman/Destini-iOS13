@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     
     @IBAction func choiceMade(_ sender: UIButton) {
         
-        stories.nextStory(userChoice: sender.titleLabel?.text ?? "")
+        stories.nextStory(userChoice: sender.tag)
         updateUI()
     }
     
@@ -39,6 +39,9 @@ class ViewController: UIViewController {
         storyLabel.text = story.title
         choice1Button.setTitle(story.choice1, for: .normal)
         choice2Button.setTitle(story.choice2, for: .normal)
+        
+        choice1Button.tag = story.choice1Destination)
+        choice2Button.tag = story.choice2Destination)
     }
     
 }
